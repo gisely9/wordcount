@@ -1,9 +1,18 @@
-
+/**
+ * Date: 19/11/2021
+ * This is the 
+ * @author gisele
+ *
+ */
 public class Word implements Comparable<Word> {
 
+	// variables 
+	
 	
 	private String word;
 	private int count;
+	
+	//constructor 
 	
 	public Word(String word, int count) {
 		super();
@@ -12,6 +21,9 @@ public class Word implements Comparable<Word> {
 			this.count = count;
 		}
 	}
+	
+	// getters and setters 
+	
 	
 	public String getWord() {
 		return word;
@@ -31,6 +43,11 @@ public class Word implements Comparable<Word> {
 		}
 	}
 	
+	/**
+	 * A method that allows Word objects to be compared 
+	 * in order to allow ArrayList of word to be sorted 
+	 * by the frequency.
+	 */
 	
 	
 	@Override
@@ -46,3 +63,6 @@ public class Word implements Comparable<Word> {
 	
 
 }
+
+
+
