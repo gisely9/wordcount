@@ -1,7 +1,11 @@
+package application;
+
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -31,9 +35,6 @@ public class gui<Private> implements ActionListener {
 	private JFrame frame ;
 	private JPanel panel ;
 	Private JHyperlink;
-	private Object linkWebsite;
-
-
 	/**
 	 * Creating a frame and button where words will be stored 
 	 */
@@ -51,7 +52,15 @@ public class gui<Private> implements ActionListener {
 		
 	    panel = new JPanel ();
 		panel.setBorder(BorderFactory.createEmptyBorder(30,30,10,30));
-		linkWebsite.setURL("https://www.gutenberg.org/files/1065/1065-h/1065-h.htm");
+		
+		String str = ("https://www.gutenberg.org/files/1065/1065-h/1065-h.htm");
+		try {
+			new URI (str);
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 
 		
 	    panel.setLayout(new GridLayout(0,1));
 	    panel.add(button);
@@ -67,7 +76,7 @@ public class gui<Private> implements ActionListener {
 
 	public static void main(String[] args) {
 		
-		new gui();
+		
 
 	}
 	
@@ -81,3 +90,8 @@ public class gui<Private> implements ActionListener {
 	}
 
 }
+
+
+
+	
+			 
